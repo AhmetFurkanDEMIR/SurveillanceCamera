@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>Login</h3>
+<hr>
+
+<div align="center">
+
+<img src="{{ url_for('static', filename = 'icon.png') }}" >
+
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<form method = "post">
+        {{ render_field(form.username) }}
+        {{ render_field(form.password) }}
+        
+        <button type="submit" id="submit" name="submit" value="Login" class="btn btn-primary">  Login  </button>
+
+        <button type="submit" id="submit" name="submit" value="User" class="btn btn-primary">User operations</button>
+       
+</form>
+
+</div>
+
+<pre>
+
+
+
+</pre>
+
+{% endblock body %}

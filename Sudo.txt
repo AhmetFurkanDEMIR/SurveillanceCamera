@@ -1,0 +1,2 @@
+#You can add or delete users with this sudo password.
+Password=pass*/1881*

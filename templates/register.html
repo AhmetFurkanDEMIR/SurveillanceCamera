@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<h3>User operations</h3>
+<hr>
+
+<div align="center">
+<img src="{{ url_for('static', filename = 'icon.png') }}" >
+</div>
+
+<form method = "post">
+
+    {{ render_field(form.username,class = "form-control") }}
+    {{ render_field(form.password,class = "form-control") }}
+    {{ render_field(form.sudo_password_input,class = "form-control") }}
+
+    <button type="submit" id="submit" name="submit" value="Register" class="btn btn-primary">Add user</button>
+    <button type="submit" id="submit" name="submit" value="Delete" class="btn btn-primary">Delete user</button>
+    <button type="submit" id="submit" name="submit" value="Login" class="btn btn-primary">Login screen</button>
+</form>
+
+<pre>
+
+
+
+</pre>
+
+{% endblock body %}
